@@ -1,4 +1,5 @@
 import { Car } from "./Models/Car.js"
+import { House } from "./Models/House.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -10,7 +11,13 @@ class AppState extends EventEmitter {
     new Car({ make: 'Elven', model: 'Sleigh', year: 1700, price: 900000, description: 'It only works once a year, and has 8 horsepower', color: '#f44545', imgUrl: 'https://cdn.shopify.com/s/files/1/1319/9267/products/metal-sleigh_1_1024x1024.jpg' })
   ]
   /** @type {import('./Models/House').House[]} */
-  houses = []
+  houses = [
+    new House({ bedrooms: 3, bathrooms: 3, year: 2008, price: 550000, description: 'Comes with Live, Laugh, Love sign probably.', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrI_oeeSIzahDCnAa0IsZRgpsGmB0gEXmKRA&usqp=CAU' }),
+    new House({ bedrooms: 2, bathrooms: 1, year: 1989, price: 225000, description: 'Great home to stay off the grid.', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTprLt-wKpCbm7YQG0pPhxt98vfWyK6DAHscQ&usqp=CAU' }),
+    new House({ bedrooms: 4, bathrooms: 3, year: 2020, price: 900000, description: 'This H.O.A is a pain in the A.S.S.', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP22dJS0LeT4p79r1IQdqaTY-TcOiPt9jwkg&usqp=CAU' })
+
+
+  ]
 }
 
 export const ProxyState = new Proxy(new AppState(), {

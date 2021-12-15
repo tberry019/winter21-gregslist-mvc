@@ -11,14 +11,14 @@
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>gregslist-mvc</title>
+  <title>Taylor's Gregslist-mvc</title>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-primary text-pink no-select justify-content-between px-4">
       <a class="navbar-brand ms-3" href="#">
-        <span class="ms-2">gregslist-mvc</span>
+        <span class="ms-2">Taylor's Gregslist-mvc</span>
       </a>
       <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#new-listing">
         <i class="mdi mdi-plus text-dark"></i>
@@ -29,7 +29,7 @@
     <div class="row flex-grow-1">
       <div class="col-2 bg-secondary py-3">
         <h4 class="selectable p-2" onclick="app.carsController.drawCars()">Cars</h4>
-        <h4 class="selectable p-2">Houses</h4>
+        <h4 class="selectable p-2" onclick="app.housesController.drawHouses()">Houses</h4>
         <h4 class="selectable p-2">Jobs</h4>
       </div>
       <div class="col-10">
