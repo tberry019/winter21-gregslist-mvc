@@ -1,5 +1,7 @@
 import { Car } from "./Models/Car.js"
 import { House } from "./Models/House.js"
+import { Job } from "./Models/Job.js"
+
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -18,6 +20,11 @@ class AppState extends EventEmitter {
 
 
   ]
+
+  jobs = [
+    new Job({ time: 'full', location: 'Boise', pay: 100000, description: 'Come be a Lawyer!', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rUScM744ugwukjA66-03nyXR0o1bd7bHQA&usqp=CAU' })
+  ]
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {
