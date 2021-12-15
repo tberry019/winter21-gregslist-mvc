@@ -4,12 +4,12 @@ export function getHouseform() {
     <div class="mb-3 d-flex justify-content-between">
       <div>
         <label for="bedroom" class="form-label">Bedroom</label>
-        <input type="text" class="form-control" name="bedroom" id="bedroom" aria-describedby="bedroom"
+        <input type="text" class="form-control" name="bedrooms" id="bedrooms" aria-describedby="bedroom"
           placeholder="Bedroom..." required>
       </div>
       <div>
         <label for="bathroom" class="form-label">Bathroom</label>
-        <input type="text" class="form-control" name="bathroom" id="bathroom" aria-describedby="bathroom"
+        <input type="text" class="form-control" name="bathrooms" id="bathrooms" aria-describedby="bathroom"
           placeholder="Bathroom..." required>
       </div>
     </div>
