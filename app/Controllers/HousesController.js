@@ -7,12 +7,7 @@ function _drawHouses() {
   let template = ''
   houses.forEach(h => template += h.Template)
   document.getElementById('listings').innerHTML = template
-
-
 }
-
-
-
 export class HousesController {
   constructor() {
     ProxyState.on('houses', _drawHouses)
