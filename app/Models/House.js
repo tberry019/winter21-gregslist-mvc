@@ -1,14 +1,14 @@
-import { generateId } from "../Utils/generateId.js";
+// import { generateId } from "../Utils/generateId.js";
 
 export class House {
   constructor(data) {
-    this.id = generateId()
-    this.bedrooms = data.bedrooms
-    this.bathrooms = data.bathrooms
-    this.year = data.year
-    this.price = data.price
-    this.description = data.description
-    this.imgUrl = data.imgUrl
+    this.id = data.id
+    this.bedrooms = data.bedrooms || ''
+    this.bathrooms = data.bathrooms || ''
+    this.year = data.year || 0
+    this.price = data.price || 0
+    this.description = data.description || ''
+    this.imgUrl = data.imgUrl || ''
   }
   get Template() {
     return `
@@ -23,6 +23,7 @@ export class House {
           <p class="m-0">$${this.price}</p>
           <div class="d-flex align-items-center">
           </div>
+          <i class="mdi mdi-pencil selectable" onclick="app.housesController.editHouse('${this.id}')"></i>
           <i class="mdi mdi-delete selectable" onclick="app.housesController.removeHouse('${this.id}')"></i>
         </div>
       </div>

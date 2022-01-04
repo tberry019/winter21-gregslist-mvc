@@ -1,15 +1,16 @@
-import { generateId } from "../Utils/generateId.js"
-
 export class Car {
   constructor(data) {
-    this.id = generateId()
-    this.make = data.make
-    this.model = data.model
-    this.year = data.year
-    this.price = data.price
-    this.description = data.description
-    this.color = data.color
-    this.imgUrl = data.imgUrl
+    // NOTE '' are for setting defaults
+    this.id = data.id
+    this.make = data.make || ''
+    this.model = data.model || ''
+    this.year = data.year || 0
+    this.price = data.price || 0
+    this.description = data.description || ''
+    this.color = data.color || ''
+    this.imgUrl = data.imgUrl || ''
+    this.createdAt = data.createdAt || ''
+    this.updatedAt = data.updatedAt || ''
   }
 
   get Template() {
@@ -27,6 +28,7 @@ export class Car {
             <p class="m-0">Color:</p>
             <div class="color-box border border-dark" style="background-color: ${this.color};"></div>
           </div>
+          <i class="mdi mdi-pencil selectable" onclick="app.carsController.editCar('${this.id}')"></i>
           <i class="mdi mdi-delete selectable" onclick="app.carsController.removeCar('${this.id}')"></i>
         </div>
       </div>
