@@ -21,7 +21,7 @@ export class HousesController {
     document.getElementById('modal-body-slot').innerHTML = getHouseform()
 
   }
-  async createHouse() {
+  async createHouse(id) {
     try {
       // prevents page reload
       window.event.preventDefault()
@@ -34,6 +34,7 @@ export class HousesController {
         bathrooms: form.bathrooms.value,
         year: form.year.value,
         price: form.price.value,
+        levels: form.levels.value,
         description: form.description.value,
         imgUrl: form.imgUrl.value
 

@@ -43,6 +43,11 @@ export function getHouseform(houseData = {}) {
       <textarea type="text" class="form-control" name="description" id="description"
         aria-describedby="description" placeholder="description..." min="5" max="250"required>${newHouse.description} </textarea>
     </div>
+    <div>
+      <label for="levels" class="form-label">Levels</label>
+      <textarea type="text" class="form-control" name="levels" id="levels"
+        aria-describedby="levels" placeholder="levels..." min="5" max="250" value="${newHouse.levels}" required> </textarea>
+    </div>
     </div>
     <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
